@@ -1,0 +1,229 @@
+\documentclass[12pt]{xepersian-user}
+\usepackage{xecolour}
+\usepackage{supertabular}
+\setmainfont[Scale=1,Mapping=tex-text]{Linux Libertine}
+\def\Date{09/01/05}
+\def\Version{0.1}
+\makeindex
+\begin{document}
+\begingroup
+\evensidemargin \paperwidth\relax
+\advance\evensidemargin -2in
+\advance\evensidemargin -\textwidth
+\divide\evensidemargin 2
+\oddsidemargin\evensidemargin
+\begin{titlepage}
+
+\let\footnotesize\small
+\let\footnoterule\relax
+\setcounter{page}{0}
+
+\null
+\vfil
+\vskip 25pt
+\begin{center}
+  {\LARGE\textbf{\textsf{xecolour} Package}}\\[5pt]
+  {\large\textbf{Colour in \XeLaTeX}.}\\
+\end{center}
+
+\bigskip\bigskip
+\hbox to \hsize{%
+  \hss
+%\includegraphics[width=9cm,height=9cm]{iran.jpg}
+   \hss}
+\bigskip
+\bigskip
+
+\begin{center}
+{\LARGE\textbf{User's Guide}}\par
+\vskip 3em
+{\large \lineskip .75em Vafa Khalighi}\par
+\vskip 1.5em
+{\large \thefiledate\\[2pt]
+ Version \Version%
+ \footnote{Documentation edited and repacked at \thefiledate\ by 
+           Vafa Khalighi \url{vafa.khalighi@students.mq.edu.au}.}}\par
+
+\end{center}
+\vfil
+\small
+Author's address:\\
+  4/34 Sorrell Street\\
+  Parramatta\\
+  NSW 2150\\
+ Australia\\[3mm]
+  Internet: \Verb[codes={\catcode`\<=12}]+<vafa.khalighi@students.mq.edu.au>+
+\end{titlepage}
+
+\endgroup
+
+\setcounter{footnote}{0}
+\tableofcontents
+\pagenumbering{arabic}
+\part*{Introduction}
+As the author of \XePersian\ package (a package for Persian typesetting in \LaTeX\ over \XeTeX), I always wanted to write a package that make writing in colours easy in bidirectional texts. However there are packages \textsf{color} and \textsf{xcolor}, but writing bidirectional texts in different colours using these packages is a nightmare and the colours of the text will get mixed. In fact, the \textsf{bidi} package has a patch where one could use the packages mentioned above to write text in colour but unfortunately that text has got to be not more than a line, otherwise the colour of the text gets mixed.
+
+Thus, I wrote \textsf{xecolour} package which allows the user to write texts in 140 different colours without any problem. I have used \XeTeX's feature to define 140 colours and I believe these 140 colours are all one needs. The command names are just the names of colours (i.e. "\blue" for blue colour) and the general syntax is:
+\begingroup
+\catcode`\<=12
+\Mac \colourname{<text>}
+\endgroup
+In the next section, you will see a sample of each colour, and at the end of this manual, in the index part, all commands are written in alphabetical order. So if you wish to use a specific colour, please look at the index and find the command you should use.
+\part{Sample Colours}
+\begin{tabular}{rl}
+\aliceblue{xecolour}&\n\aliceblue\\
+\aquamarine{xecolour}&\n\aquamarine\\
+\bisque{xecolour}&\n\bisque\\
+\blue{xecolour} &\n\blue\\
+\burlywood{xecolour}&\n\burlywood\\
+\chocolate{xecolour}&\n\chocolate\\
+\cornsilk{xecolour}&\n\cornsilk\\
+\darkblue{xecolour}&\n\darkblue\\
+\darkgray{xecolour}&\n\darkgray\\
+\darkmagenta{xecolour}&\n\darkmagenta\\
+\darkorchid{xecolour}&\n\darkorchid\\
+\darkseagreen{xecolour}&\n\darkseagreen\\
+\darkturquoise{xecolour}&\n\darkturquoise\\
+\deepskyblue{xecolour}&\n\deepskyblue\\
+\firebrick{xecolour}&\n\firebrick\\
+\fuchsia{xecolour}&\n\fuchsia\\
+\gold{xecolour}&\n\gold\\
+\green{xecolour}&\n\green\\
+\hotpink{xecolour}&\n\hotpink\\
+\ivory{xecolour}&\n\ivory\\
+\lavenderblush{xecolour}&\n\lavenderblush\\
+\lightblue{xecolour}&\n\lightblue\\
+\lightgoldenrodyellow{xecolour}&\n\lightgoldenrodyellow\\
+\lightpink{xecolour}&\n\lightpink\\
+\lightskyblue{xecolour}&\n\lightskyblue\\
+\lightyellow{xecolour}&\n\lightyellow\\
+\linen{xecolour}&\n\linen\\
+\mediumaquamarine{xecolour}&\n\mediumaquamarine\\
+\mediumpurple{xecolour}&\n\mediumpurple\\
+\end{tabular}
+\newpage
+\begin{tabular}{rl}
+\mediumspringgreen{xecolour}&\n\mediumspringgreen\\
+\midnightblue{xecolour}&\n\midnightblue\\
+\moccasin{xecolour}&\n\moccasin\\
+\oldlace{xecolour}&\n\oldlace\\
+\orangered{xecolour}&\n\orangered\\
+\palegreen{xecolour}&\n\palegreen\\
+\papayawhip{xecolour}&\n\papayawhip\\
+\pink{xecolour}&\n\pink\\
+\purple{xecolour}&\n\purple\\
+\royalblue{xecolour}&\n\royalblue\\
+\sandybrown{xecolour}&\n\sandybrown\\
+\sienna{xecolour}&\n\sienna\\
+\slateblue{xecolour}&\n\slateblue\\
+\steelblue{xecolour}&\n\steelblue\\
+\thistle{xecolor}&\n\thistle\\
+\violet{xecolour}&\n\violet\\
+\whitesmoke{xecolour}&\n\whitesmoke\\
+\antiquewhite{xecolour}&\n\antiquewhite\\
+\azure{xecolour}&\n\azure\\
+\black{xecolour}&\n\black\\
+\blueviolet{xecolour}&\n\blueviolet\\
+\cadetblue{xecolour}&\n\cadetblue\\
+\coral{xecolour}&\n\coral\\
+\crimson{xecolour}&\n\crimson\\
+\darkcyan{xecolour}&\n\darkcyan\\
+\darkgreen{xecolour}&\n\darkgreen\\
+\darkolivegreen{xecolour}&\n\darkolivegreen\\
+\darkred{xecolour}&\n\darkred\\
+\darkslateblue{xecolour}&\n\darkslateblue\\
+\darkviolet{xecolour}&\n\darkviolet\\
+\dimgray{xecolour}&\n\dimgray\\
+\floralwhite{xecolour}&\n\floralwhite\\
+\gainsboro{xecolour}&\n\gainsboro\\
+\goldenrod{xecolour}&\n\goldenrod\\
+\greenyellow{xecolour}&\n\greenyellow\\
+\indianred{xecolour}&\n\indianred\\
+\khaki{xecolour}&\n\khaki\\
+\lawngreen{xecolour}&\n\lawngreen\\
+\end{tabular}
+\newpage
+\begin{tabular}{rl}
+\lightcoral{xecolour}&\n\lightcoral\\
+\lightgreen{xecolour}&\n\lightgreen\\
+\lightsalmon{xecolour}&\n\lightsalmon\\
+\lightslategray{xecolour}&\n\lightslategray\\
+\lime{xecolour}&\n\lime\\
+\magenta{xecolour}&\n\magenta\\
+\mediumblue{xecolour}&\n\mediumblue\\
+\mediumseagreen{xecolour}&\n\mediumseagreen\\
+\mediumturquoise{xecolour}&\n\mediumturquoise\\
+\mintcream{xecolour}&\n\mintcream\\
+\navajowhite{xecolour}&\n\navajowhite\\
+\olivedrab{xecolour}&\n\olivedrab\\
+\orchid{xecolour}&\n\orchid\\
+\paleturquoise{xecolour}&\n\paleturquoise\\
+\peachpuff{xecolour}&\n\peachpuff\\
+\plum{xecolour}&\n\plum\\
+\red{xecolour}&\n\red\\
+\saddlebrown{xecolour}&\n\saddlebrown\\
+\seagreen{xecolour}&\n\seagreen\\
+\silver{xecolour}&\n\silver\\
+\snow{xecolour}&\n\snow\\
+\tancolour{xecolour}&\n\tancolour\\
+\tomato{xecolour}&\n\tomato\\
+\wheat{xecolour}&\n\wheat\\
+\yellow{xecolour}&\n\yellow\\
+\aqua{xecolour}&\n\aqua\\
+\beige{xecolour}&\n\beige\\
+\blanchedalmond{xecolour}&\n\blanchedalmond\\
+\brown{xecolour}&\n\brown\\
+\chartreuse{xecolour}&\n\chartreuse\\
+\cornflowerblue{xecolour}&\n\cornflowerblue\\
+\cyan{xecolour}&\n\cyan\\
+\darkgoldenrod{xecolour}&\n\darkgoldenrod\\
+\darkkhaki{xecolour}&\n\darkkhaki\\
+\darkorange{xecolour}&\n\darkorange\\
+\darksalmon{xecolour}&\n\darksalmon\\
+\darkslategray{xecolour}&\n\darkslategray\\
+\end{tabular}
+\newpage
+\begin{tabular}{rl}
+\deeppink{xecolour}&\n\deeppink\\
+\dodgerblue{xecolour}&\n\dodgerblue\\
+\forestgreen{xecolour}&\n\forestgreen\\
+\ghostwhite{xecolour}&\n\ghostwhite\\
+\gray{xecolour}&\n\gray\\
+\honeydew{xecolour}&\n\honeydew\\
+\indigo{xecolour}&\n\indigo\\
+\lavender{xecolour}&\n\lavender\\
+\lemonchiffon{xecolour}&\n\lemonchiffon\\
+\lightcyan{xecolour}&\n\lightcyan\\
+\lightgrey{xecolour}&\n\lightgrey\\
+\lightseagreen{xecolour}&\n\lightseagreen\\
+\lightsteelblue{xecolour}&\n\lightsteelblue\\
+\limegreen{xecolour}&\n\limegreen\\
+\maroon{xecolour}&\n\maroon\\
+\mediumorchid{xecolour}&\n\mediumorchid\\
+\mediumslateblue{xecolour}&\n\mediumslateblue\\
+\mediumvioletred{xecolour}&\n\mediumvioletred\\
+\mistyrose{xecolour}&\n\mistyrose\\
+\navy{xecolour}&\n\mistyrose\\
+\orange{xecolour}&\n\orange\\
+\palegoldenrod{xecolour}&\n\palegoldenrod\\
+\palevioletred{xecolour}&\n\palevioletred\\
+\peru{xecolour}&\n\peru\\
+\powderblue{xecolour}&\n\powderblue\\
+\rosybrown{xecolour}&\n\rosybrown\\
+\salmon{xecolour}&\n\salmon\\
+\seashell{xecolour}&\n\seashell\\
+\skyblue{xecolour}&\n\skyblue\\
+\springgreen{xecolour}&\n\springgreen\\
+\teal{xecolour}&\n\teal\\
+\turquoise{xecolour}&\n\turquoise\\
+\white{xecolour}&\n\white\\
+\yellowgreen{xecolour}&\n\yellowgreen\\
+\lightyellow{xecolour}&\n\lightyellow\\
+\crimson{xecolour}&\n\crimson\\
+\bluishgreenishgrey{xecolour}&\n\bluishgreenishgrey\\
+\end{tabular}
+
+
+
+\PrintUserIndex
+\end{document}

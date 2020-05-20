@@ -1,0 +1,16 @@
+-------------------------------
+The xecolour Package v0.1
+
+xecolour package is a simple package which defines about 140 different colours by XeTeX's
+colour feature that can be used in bidirectional texts without any problem. All the command 
+names are  the names of the colours (i.e. \blue for blue colour) except ``\tancolour''
+for ``tan colour'' and the general syntax of the command is
+
+		\colourname{<text>}
+
+
+Please report any bugs to the author (vafa.khalighi@students.mq.edu.au).
+
+-------------------------------
+Vafa Khalighi
+2009/01/05
